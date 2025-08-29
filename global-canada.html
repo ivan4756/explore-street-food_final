@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Cuisine</title>
+
+    <!-- Favicon -->
+    <link
+        href="https://static.vecteezy.com/system/resources/previews/007/095/731/non_2x/canada-realistic-waving-flag-illustration-national-country-background-symbol-independence-day-free-vector.jpg"
+        rel="icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!--footer css link-->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+.navbar .badge[data-fav-count],
+.navbar .nav-link .badge[data-fav-count],
+.text-bg-warning[data-fav-count]{
+  background:#ffc107 !important;color:#212529 !important;
+  opacity:1 !important;filter:none !important;mix-blend-mode:normal !important;
+  border-radius:999px !important;font-weight:700 !important;padding:2px 6px !important;
+}
+</style>
+
+</head>
+
+
+<body>
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+           
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="malaysia.html">Malaysian Street Food</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Global Street Food
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item active" aria-current="page" href="global-canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="global-italy.html">Italy</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="culture.html">Food Culture</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="top10.html">Top 10 Food</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="story.html">Street Food Story</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="festival.html">Festival Seasons</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html">About us</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="favorites.html">
+                    Favourites
+                  <span class="badge rounded-pill text-bg-warning align-text-top ms-1" data-fav-count>0</span>
+                </a>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <a href="login.html" class="login-button">LOGIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="hero-banner canada-hero">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1 class="display-2 fw-bold text-white mb-4">Taste of Canada</h1>
+                            <p class="lead text-white-50">Discover the rich culinary heritage of the Great White North
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container my-5">
+            <!-- Introduction -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Canadian Culinary Heritage</h2>
+                    <p class="lead text-muted">From the French-influenced cuisine of Quebec to the maritime flavors of
+                        the Atlantic provinces, Canadian food culture reflects the country's diverse heritage and
+                        abundant natural resources.</p>
+                </div>
+            </div>
+
+            <!-- Regional Cuisines Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Regional Cuisines</h2>
+
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs justify-content-center" id="regionTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="quebec-tab" data-bs-toggle="tab"
+                                data-bs-target="#quebec" type="button" role="tab">
+                                <i class="fas fa-snowflake me-2"></i>Quebec
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="atlantic-tab" data-bs-toggle="tab" data-bs-target="#atlantic"
+                                type="button" role="tab">
+                                <i class="fas fa-fish me-2"></i>Atlantic Canada
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="ontario-tab" data-bs-toggle="tab" data-bs-target="#ontario"
+                                type="button" role="tab">
+                                <i class="fas fa-city me-2"></i>Ontario
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="prairies-tab" data-bs-toggle="tab" data-bs-target="#prairies"
+                                type="button" role="tab">
+                                <i class="fas fa-wheat-awk me-2"></i>Prairies
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="west-tab" data-bs-toggle="tab" data-bs-target="#west"
+                                type="button" role="tab">
+                                <i class="fas fa-mountain me-2"></i>West Coast
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="regionTabContent">
+                        <!-- Quebec Tab -->
+                        <div class="tab-pane fade show active" id="quebec" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://images.pexels.com/photos/15159417/pexels-photo-15159417.jpeg"
+                                            class="card-img-top" alt="Poutine"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Poutine</h5>
+                                            <p class="card-text">Golden fries with cheese curds and gravy - Quebec's
+                                                iconic comfort food.</p>
+                                            <span class="badge bg-primary badge-region">Quebec Specialty</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://cristinaskitchen.com/wp-content/uploads/2024/03/sliced-tourtiere-cover-image.jpg"
+                                            class="card-img-top" alt="Tourtière"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tourtière</h5>
+                                            <p class="card-text">Traditional meat pie, a Christmas staple across French
+                                                Canada.</p>
+                                            <span class="badge bg-success badge-region">Holiday Tradition</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/recipe_legacy/9744-3-large.jpg?itok=K6bXAnPE"
+                                            class="card-img-top" alt="Montreal Bagel"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Montreal Bagel</h5>
+                                            <p class="card-text">Hand-rolled, wood-fired bagels with a distinctive sweet
+                                                taste.</p>
+                                            <span class="badge bg-warning badge-region">Montreal Classic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Atlantic Canada Tab -->
+                        <div class="tab-pane fade" id="atlantic" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://barefootinthepines.com/wp-content/uploads/2024/05/Maine-Lobster-Rolls-3.jpg"
+                                            class="card-img-top" alt="Lobster Roll"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lobster Roll</h5>
+                                            <p class="card-text">Fresh lobster meat in a toasted roll - Maritime luxury.
+                                            </p>
+                                            <span class="badge bg-info badge-region">Maritime Special</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.allrecipes.com/thmb/UzOz1b8iWbaX9ORD5jnW6RM0OoQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-16580-Classic-Fish-and-chips-Beauty-4x3-9ca78f2929a64d48ae052008d02358e2.jpg"
+                                            class="card-img-top" alt="Fish and Chips"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Fish and Chips</h5>
+                                            <p class="card-text">Crispy battered fish with hand-cut fries, seaside
+                                                tradition.</p>
+                                            <span class="badge bg-primary badge-region">Coastal Favorite</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://xoxobella.com/wp-content/uploads/2024/07/Donair_recipe-featured.jpg"
+                                            class="card-img-top" alt="Donair" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Halifax Donair</h5>
+                                            <p class="card-text">Nova Scotia's official food - sweet sauce and spiced
+                                                meat.</p>
+                                            <span class="badge bg-danger badge-region">Halifax Original</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ontario Tab -->
+                        <div class="tab-pane fade" id="ontario" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://xoxobella.com/wp-content/uploads/2023/01/butter_tart_recipe-5.jpg"
+                                            class="card-img-top" alt="Butter Tarts"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Butter Tarts</h5>
+                                            <p class="card-text">Sweet pastry shells with butter, sugar, and syrup
+                                                filling.</p>
+                                            <span class="badge bg-warning badge-region">Ontario Classic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://genuinecanadianbacon.com/wp-content/uploads/2019/12/PeamealBaconMapleSyrup-TightCrop_V2_MED_RGB-scaled-e1698159271792.jpg"
+                                            class="card-img-top" alt="Peameal Bacon"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Peameal Bacon</h5>
+                                            <p class="card-text">Toronto's famous back bacon rolled in cornmeal.</p>
+                                            <span class="badge bg-success badge-region">Toronto Specialty</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.seriouseats.com/thmb/gPvYlWaMmSKLE0AUaCSMmQhEFQM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20240628-NanaimoBars-AmandaSuarez-hero-82c6e1320a5b4141ad9557a9800f6fed.jpg"
+                                            class="card-img-top" alt="Nanaimo Bar"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Nanaimo Bar</h5>
+                                            <p class="card-text">Three-layered no-bake bar with coconut and custard.</p>
+                                            <span class="badge bg-info badge-region">National Dessert</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prairies Tab -->
+                        <div class="tab-pane fade" id="prairies" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5-DQEUvN8qN7VRkDgIMeygcNsKGnyb0hfgw&s"
+                                            class="card-img-top" alt="Saskatoon Berry Pie"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Saskatoon Berry Pie</h5>
+                                            <p class="card-text">Sweet indigenous berries in traditional prairie pie.
+                                            </p>
+                                            <span class="badge bg-purple badge-region">Prairie Harvest</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJPvGnuiDM4ya57nQocGvwVMlOFtY9KUEFA&s"
+                                            class="card-img-top" alt="Bison Burger"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bison Burger</h5>
+                                            <p class="card-text">Lean, flavorful meat from the Great Plains.</p>
+                                            <span class="badge bg-danger badge-region">Plains Special</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.stopfoodwasteday.com/content/dam/compass-group/sfwd/recipes/bannock%20with%20bacon%20image.jpg"
+                                            class="card-img-top" alt="Bannock"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bannock</h5>
+                                            <p class="card-text">Traditional indigenous bread, often cooked over open
+                                                fire.</p>
+                                            <span class="badge bg-secondary badge-region">Indigenous Tradition</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- West Coast Tab -->
+                        <div class="tab-pane fade" id="west" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2015/05/Cedar-Plank-Salmon-with-Maple-Glaze.HEADER.jpg"
+                                            class="card-img-top" alt="Cedar Plank Salmon"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cedar Plank Salmon</h5>
+                                            <p class="card-text">Pacific salmon cooked on aromatic cedar wood.</p>
+                                            <span class="badge bg-success badge-region">BC Signature</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://korenainthekitchen.com/wp-content/uploads/2013/07/img_3802.jpg"
+                                            class="card-img-top" alt="Spot Prawns"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Spot Prawns</h5>
+                                            <p class="card-text">Sweet, delicate prawns from BC's pristine waters.</p>
+                                            <span class="badge bg-info badge-region">West Coast Delicacy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://media-cdn2.greatbritishchefs.com/media/mmkd0qee/img65931.whqc_675x450q80.jpg"
+                                            class="card-img-top" alt="Icewine"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Icewine</h5>
+                                            <p class="card-text">Sweet dessert wine made from frozen grapes.</p>
+                                            <span class="badge bg-warning badge-region">Premium Product</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Signature Dishes Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Signature Canadian Dishes</h2>
+                </div>
+            </div>
+
+            <!-- Poutine Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://images.pexels.com/photos/15159417/pexels-photo-15159417.jpeg"
+                            class="img-fluid rounded-start h-100 object-cover" alt="Canadian Poutine">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-maple-leaf text-danger me-2"></i>Poutine
+                                </h3>
+                                <p class="card-text">Golden fries topped with cheese curds and savory gravy, Quebec's
+                                    signature dish that has become a symbol of Canadian comfort food.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/auUiA7755Mo?si=5PIlbOdu8QMNH_oX"
+                                        title="Classic Canadian Poutine" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>Origin: Montreal, Quebec</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179885.26571746068!2d-73.98314484425183!3d45.50884173827908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC%2C%20Canada!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Butter Tarts Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6 order-md-2">
+                        <img src="https://static01.nyt.com/images/2018/05/30/dining/30burnertarts/30burnertarts-superJumbo.jpg"
+                            class="img-fluid rounded-end h-100 object-cover" alt="Canadian Butter Tarts">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-cookie-bite text-warning me-2"></i>Butter Tarts
+                                </h3>
+                                <p class="card-text">Classic Canadian dessert with sweet filling in flaky pastry, a
+                                    beloved treat that has been satisfying sweet cravings since the 1600s.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/LbpCgpPIewo?si=LcvIWFcGdINMnUAe"
+                                        title="Bakery Butter Tarts Showcase" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>Region: Ontario, Canada</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5907564.086717847!2d-88.65394656219287!3d46.78075845227807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccce7b95ba27e49%3A0x89d84c7ae8ace3d!2sOntario%2C%20Canada!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maple Syrup Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://images.pexels.com/photos/6529914/pexels-photo-6529914.jpeg"
+                            class="img-fluid rounded-start h-100 object-cover" alt="Maple Syrup Production">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-tree text-success me-2"></i>Maple Syrup
+                                </h3>
+                                <p class="card-text">Harvested from maple trees every spring, a symbol of Canadian
+                                    identity and a natural sweetener that represents the country's connection to its
+                                    forests.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/XoIB4nVL3ws?si=p-ZXtPckWPQs2Vod"
+                                        title="Maple Syrup Farm Production" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>Quebec Maple Syrup Regions</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985866.244413259!2d-75.78906643847657!3d48.77919815224077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7a8c2f6a8b8b1%3A0x2e6c6e0e5f6e5b5b!2sQuebec%2C%20Canada!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Food Festivals Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Canadian Food Festivals</h2>
+                    <p class="text-center text-muted mb-5">Experience Canada's culinary celebrations throughout the year
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQOReY6glMbhlGoGRuijLgHcq2M-hDAPhP4g&s"
+                            class="card-img-top" alt="Winterlicious Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-snowflake text-info me-2"></i>Winterlicious
+                            </h5>
+                            <p class="card-text">Toronto's premier winter dining festival featuring prix fixe menus from
+                                the city's best restaurants.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>January - February
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Toronto, ON
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://www.woolwich.ca/media/tziabz1c/2024-04-06-elmira-maple-syrup-festival-2.jpg"
+                            class="card-img-top" alt="Maple Syrup Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-tree text-warning me-2"></i>Maple Syrup Festival
+                            </h5>
+                            <p class="card-text">Celebrate the arrival of spring with traditional maple syrup harvesting
+                                and tasting events across Quebec.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>March - April
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Quebec
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr0mSrZy9lj1_RO7GTpYi9pBmxxXTkccZN6Q&s"
+                            class="card-img-top" alt="Lobster Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-fish text-danger me-2"></i>Lobster Festival
+                            </h5>
+                            <p class="card-text">Maritime celebration of Atlantic Canada's prized lobster with cooking
+                                demonstrations and tastings.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>June - July
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Maritime Provinces
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://livewirecalgary.com/wp-content/uploads/2024/08/DSC_5074.jpg"
+                            class="card-img-top" alt="Taste of Calgary" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-mountain text-success me-2"></i>Taste of Calgary
+                            </h5>
+                            <p class="card-text">Western Canada's largest food festival showcasing Alberta beef and
+                                local prairie specialties.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>August
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Calgary, AB
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwaSegpiXTwm_cvLHRcjGUX3fUw-m8LHjTQ&s"
+                            class="card-img-top" alt="Wine Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-wine-glass text-purple me-2"></i>Wine & Food Festival
+                            </h5>
+                            <p class="card-text">BC's wine country celebration featuring local vintages paired with
+                                fresh Pacific Northwest cuisine.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>September
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Okanagan Valley, BC
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPYW_zZproBYCx_z-m6WnwlyCpmD9MWvwZtQ&s"
+                            class="card-img-top" alt="Poutine Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-utensils text-warning me-2"></i>La Poutine Week
+                            </h5>
+                            <p class="card-text">Annual celebration of Canada's national dish with creative variations
+                                from restaurants across the country.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>February
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Nationwide
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="home.html"><img src="img/home_images/logo.png" width="100"></a></li>
+      </ul>
+      <p>Introduction to Street Food</p>
+      <p><br><br>Copyright &copy; 2025 Dream.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>EXPLORE MORE</h4>
+      <ul>
+        <li><a href="global-italy.html">Global Street Food</a></li>
+        <li><a href="malaysia.html">Malaysia Street Food</a></li>
+        <li><a href="culture.html">Food Culture by Difference Country</a></li>
+        <li><a href="top10.html">Top 10 Food</a></li>
+        <li><a href="story.html">Street Food Story</a></li>
+        <li><a href="festival.html">Festival Seasons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +03-2345 9885</li>
+        <br>
+        <li><a href="mailto: dream@gmail.com"><i class="fas fa-envelope"></i> dream99@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FOLLOW US</h4>
+      <div class="links">
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></i></a>
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your app (only this path; remove any <script src="site.js"> duplicates) -->
+<script src="js/site.js"></script>
+
+<!-- Safety: force a refresh of the badge after the DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.App && typeof App.updateFavCount === 'function') {
+      App.updateFavCount();
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

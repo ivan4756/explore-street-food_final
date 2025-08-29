@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Food</title>
+
+    <!-- Favicon -->
+    <link
+        href="https://static.vecteezy.com/system/resources/previews/002/729/562/non_2x/this-is-a-street-food-concept-free-vector.jpg"
+        rel="icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!--footer css link-->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+.navbar .badge[data-fav-count],
+.navbar .nav-link .badge[data-fav-count],
+.text-bg-warning[data-fav-count]{
+  background:#ffc107 !important;color:#212529 !important;
+  opacity:1 !important;filter:none !important;mix-blend-mode:normal !important;
+  border-radius:999px !important;font-weight:700 !important;padding:2px 6px !important;
+}
+</style>
+
+
+</head>
+
+<body>
+    <!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+           
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="malaysia.html">Malaysian Street Food</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Global Street Food
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="global-canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="global-italy.html">Italy</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="culture.html">Food Culture</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="top10.html">Top 10 Food</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 active" aria-current="page"  href="story.html">Street Food Story</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="festival.html">Festival Seasons</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html">About us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="favorites.html">Favourites
+              <span class="badge rounded-pill text-bg-warning align-text-top ms-1" data-fav-count>0</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <a href="login.html" class="login-button">LOGIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <div class="hero-banner street-food-hero">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1 class="display-2 fw-bold text-white mb-4">Street Food Stories</h1>
+                            <p class="lead text-white-50">Where culture meets cuisine on every corner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container my-5">
+            <!-- Introduction -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="mb-4">Stories from the Street</h2>
+                    <p class="lead text-muted">"Street food tells the story of culture, people, and tradition—one bite
+                        at a time."</p>
+                    <p class="text-muted">From bustling night markets to roadside vendors, street food represents the
+                        authentic flavors of local communities around the world.</p>
+                </div>
+            </div>
+
+            <!-- Street Food Categories Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Street Food by Region</h2>
+
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs justify-content-center" id="regionTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="asia-tab" data-bs-toggle="tab" data-bs-target="#asia"
+                                type="button" role="tab">
+                                <i class="fas fa-yin-yang me-2"></i>Asian Delights
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="americas-tab" data-bs-toggle="tab" data-bs-target="#americas"
+                                type="button" role="tab">
+                                <i class="fas fa-pepper-hot me-2"></i>Americas
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="europe-tab" data-bs-toggle="tab" data-bs-target="#europe"
+                                type="button" role="tab">
+                                <i class="fas fa-crown me-2"></i>European Classics
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="middle-east-tab" data-bs-toggle="tab"
+                                data-bs-target="#middle-east" type="button" role="tab">
+                                <i class="fas fa-mosque me-2"></i>Middle East
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="africa-tab" data-bs-toggle="tab" data-bs-target="#africa"
+                                type="button" role="tab">
+                                <i class="fas fa-globe-africa me-2"></i>African Flavors
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="regionTabContent">
+                        <!-- Asian Street Food Tab -->
+                        <div class="tab-pane fade show active" id="asia" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg"
+                                            class="card-img-top" alt="Bangkok Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bangkok Night Markets</h5>
+                                            <p class="card-text">Vibrant street food scene with Pad Thai, mango sticky
+                                                rice, and som tam.</p>
+                                            <span class="badge bg-warning badge-region">Thailand</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.pexels.com/photos/6770743/pexels-photo-6770743.jpeg"
+                                            class="card-img-top" alt="Penang Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Penang Street Food</h5>
+                                            <p class="card-text">UNESCO city famous for Char Kway Teow, Laksa, and
+                                                Chinese-Malay fusion.</p>
+                                            <span class="badge bg-success badge-region">Malaysia</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.pexels.com/photos/30251386/pexels-photo-30251386.jpeg"
+                                            class="card-img-top" alt="Taipei Night Market"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Taipei Night Markets</h5>
+                                            <p class="card-text">Bubble tea birthplace with xiaolongbao, beef noodle
+                                                soup, and stinky tofu.</p>
+                                            <span class="badge bg-info badge-region">Taiwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://cdn-imgix.headout.com/media/images/2004040d075bd72934b54eed1bcb9a46-22983-Seoul-SeoulStreetFoodWalkingTour-IncludeFreeStreetFood--01.jpg?w=1041.6000000000001&h=651&crop=faces&auto=compress%2Cformat&fit=min"
+                                            class="card-img-top" alt="Seoul Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Seoul Street Food</h5>
+                                            <p class="card-text">Korean hot dishes like tteokbokki, hotteok, and Korean
+                                                fried chicken.</p>
+                                            <span class="badge bg-danger badge-region">South Korea</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://static2.tripoto.com/media/filter/tst/img/109540/TripDocument/1606130030_2b35bc8d_7504_4358_92b4_16ec0d5ca258.jpeg"
+                                            class="card-img-top" alt="Mumbai Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mumbai Street Food</h5>
+                                            <p class="card-text">Spicy chaat, vada pav, and dosa from the bustling
+                                                streets of Mumbai.</p>
+                                            <span class="badge bg-primary badge-region">India</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*aeFOoEOyjOh8_HCoeUNX6g.jpeg"
+                                            class="card-img-top" alt="Tokyo Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tokyo Street Food</h5>
+                                            <p class="card-text">Fresh sushi, takoyaki, and yakitori from Tokyo's
+                                                vibrant food stalls.</p>
+                                            <span class="badge bg-warning badge-region">Japan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Americas Street Food Tab -->
+                        <div class="tab-pane fade" id="americas" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://0201.nccdn.net/1_2/000/000/129/049/picture13.jpg"
+                                            class="card-img-top" alt="Mexico City Tacos"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Mexico City Tacos</h5>
+                                            <p class="card-text">Authentic tacos al pastor, carnitas, and elote from
+                                                traditional taco stalls.</p>
+                                            <span class="badge bg-success badge-region">Mexico</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.pexels.com/photos/32409129/pexels-photo-32409129.jpeg"
+                                            class="card-img-top" alt="New York Food Trucks"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">New York Food Trucks</h5>
+                                            <p class="card-text">Iconic hot dogs, halal guys, and diverse ethnic food
+                                                trucks.</p>
+                                            <span class="badge bg-primary badge-region">USA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://kated.com/wp-content/uploads/2020/04/PER4b-Churros-Lima.jpg"
+                                            class="card-img-top" alt="Lima Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lima Street Food</h5>
+                                            <p class="card-text">Peruvian anticuchos, ceviche, and churros from Lima's
+                                                street vendors.</p>
+                                            <span class="badge bg-warning badge-region">Peru</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/99/f6/32/zaytu-n-vila-nova-wraps.jpg?w=900&h=500&s=1"
+                                            class="card-img-top" alt="São Paulo Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">São Paulo Street Food</h5>
+                                            <p class="card-text">Brazilian pastel, coxinha, and açaí from São Paulo's
+                                                bustling streets.</p>
+                                            <span class="badge bg-info badge-region">Brazil</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://img.taste.com.au/s-PZIRRH/taste/2016/11/argentinian-choripan-109514-1.jpeg"
+                                            class="card-img-top" alt="Buenos Aires Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Buenos Aires Choripán</h5>
+                                            <p class="card-text">Argentine choripán, empanadas, and dulce de leche
+                                                treats.</p>
+                                            <span class="badge bg-danger badge-region">Argentina</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://i.cbc.ca/1.5218493.1563564868!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_1180/food-truck.jpg?im=Resize%3D780"
+                                            class="card-img-top" alt="Vancouver Food Trucks"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Vancouver Food Trucks</h5>
+                                            <p class="card-text">Multicultural food trucks serving Asian fusion and
+                                                local specialties.</p>
+                                            <span class="badge bg-success badge-region">Canada</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- European Street Food Tab -->
+                        <div class="tab-pane fade" id="europe" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwrXSYuWAHwx7hQc9g_ySZUE9evCf8Atl9fw&s"
+                                            class="card-img-top" alt="Berlin Currywurst"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Berlin Currywurst</h5>
+                                            <p class="card-text">Iconic German street food with curry ketchup and döner
+                                                kebab.</p>
+                                            <span class="badge bg-warning badge-region">Germany</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2025/05/Borough-Market-sign-Green-Market-469a8a1.jpg?quality=90&fit=700,466"
+                                            class="card-img-top" alt="London Markets"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">London Market Food</h5>
+                                            <p class="card-text">Borough Market's artisanal foods and traditional
+                                                British pies.</p>
+                                            <span class="badge bg-primary badge-region">UK</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.stockcake.com/public/6/b/c/6bc5abc4-aa59-490c-9ef0-a44a78d71f20_large/parisian-crepe-making-stockcake.jpg"
+                                            class="card-img-top" alt="Paris Crepes"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Paris Street Crêpes</h5>
+                                            <p class="card-text">Sweet and savory crêpes from Parisian street vendors
+                                                and markets.</p>
+                                            <span class="badge bg-info badge-region">France</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://offloadmedia.feverup.com/secretamsterdam.com/wp-content/uploads/2024/08/06134602/Couverture-BXL-1.jpg"
+                                            class="card-img-top" alt="Amsterdam Stroopwafel"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Amsterdam Stroopwafel</h5>
+                                            <p class="card-text">Fresh stroopwafels and Dutch cheese from Amsterdam's
+                                                street markets.</p>
+                                            <span class="badge bg-danger badge-region">Netherlands</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://www.traveltalktours.com/wp-content/smush-webp/2024/05/where-to-eat-Street-Food-in-Istanbul.jpg.webp"
+                                            class="card-img-top" alt="Istanbul Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Istanbul Street Food</h5>
+                                            <p class="card-text">Turkish döner, börek, and balık ekmek from Istanbul's
+                                                bustling streets.</p>
+                                            <span class="badge bg-success badge-region">Turkey</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://images.pexels.com/photos/3793871/pexels-photo-3793871.jpeg"
+                                            class="card-img-top" alt="Barcelona Tapas"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Barcelona Street Tapas</h5>
+                                            <p class="card-text">Traditional tapas, churros, and jamón ibérico from
+                                                Barcelona's markets.</p>
+                                            <span class="badge bg-warning badge-region">Spain</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Middle East Street Food Tab -->
+                        <div class="tab-pane fade" id="middle-east" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_lanj5t-CeYwwLOvMmNkZpgZHxp0zr6NMA&s"
+                                            class="card-img-top" alt="Beirut Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Beirut Street Food</h5>
+                                            <p class="card-text">Lebanese manakish, shawarma, and knafeh from Beirut's
+                                                street vendors.</p>
+                                            <span class="badge bg-success badge-region">Lebanon</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpy_whowuj5MtDqJoSo4gzXHqz8Dmj-FosmA&s"
+                                            class="card-img-top" alt="Tel Aviv Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tel Aviv Falafel</h5>
+                                            <p class="card-text">Fresh falafel, hummus, and sabich from Tel Aviv's
+                                                bustling streets.</p>
+                                            <span class="badge bg-primary badge-region">Israel</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://cdn.shopify.com/s/files/1/0765/5807/4149/files/UAE_Street_Food.webp?v=1715593355"
+                                            class="card-img-top" alt="Dubai Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dubai Street Food</h5>
+                                            <p class="card-text">Emirsti karak chai, Arabic sweets, and international
+                                                street food fusion.</p>
+                                            <span class="badge bg-warning badge-region">UAE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- African Street Food Tab -->
+                        <div class="tab-pane fade" id="africa" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgxJKQiy4PJU63Q7b5jmdvE-rF_NPdJAWI6w&s"
+                                            class="card-img-top" alt="Lagos Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Lagos Street Food</h5>
+                                            <p class="card-text">Nigerian suya, jollof rice, and akara from Lagos's
+                                                vibrant street scene.</p>
+                                            <span class="badge bg-success badge-region">Nigeria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://www.aladyinlondon.com/wp-content/uploads/2020/11/Marrakech-Street-Food.jpg"
+                                            class="card-img-top" alt="Marrakech Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Marrakech Medina</h5>
+                                            <p class="card-text">Moroccan tagines, couscous, and mint tea from the
+                                                ancient medina.</p>
+                                            <span class="badge bg-danger badge-region">Morocco</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="card street-food-card">
+                                        <img src="https://i.ytimg.com/vi/ZYWjMpf14Ac/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDL86qd_SNmvnu_iadDqsc95TA4kg"
+                                            class="card-img-top" alt="Cape Town Street Food"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cape Town Braai</h5>
+                                            <p class="card-text">South African boerewors, biltong, and sosaties from
+                                                local markets.</p>
+                                            <span class="badge bg-info badge-region">South Africa</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Featured Street Food Stories -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Featured Street Food Stories</h2>
+                </div>
+            </div>
+
+            <!-- Street Food Cards Row -->
+            <div class="row g-4 mb-5">
+                <!-- Bangkok Night Market -->
+                <div class="col-lg-4">
+                    <div class="card h-100 street-food-card">
+                        <img src="https://cdn.pixabay.com/photo/2017/01/28/02/24/japan-2014619_1280.jpg"
+                            class="card-img-top" alt="Bangkok Night Market" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <i class="fas fa-moon text-primary me-2"></i>Bangkok Night Market
+                            </h5>
+                            <p class="card-text flex-grow-1">Experience the vibrant flavors of Thailand with authentic
+                                Pad Thai and sweet mango sticky rice from the famous night markets of Bangkok.</p>
+
+                            <!-- YouTube Video -->
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/oZkWzFBZtmo?si=VpXt-jxVd62DZbDi"
+                                    title="Bangkok Street Food Night Market" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="mt-auto">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Bangkok, Thailand
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Penang Malaysia -->
+                <div class="col-lg-4">
+                    <div class="card h-100 street-food-card">
+                        <img src="https://images.pexels.com/photos/6770743/pexels-photo-6770743.jpeg"
+                            class="card-img-top" alt="Penang Street Food" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <i class="fas fa-utensils text-warning me-2"></i>Penang, Malaysia
+                            </h5>
+                            <p class="card-text flex-grow-1">Discover the UNESCO World Heritage city's famous Char Kway
+                                Teow and aromatic Laksa, representing the fusion of Chinese and Malay cuisines.</p>
+
+                            <!-- YouTube Video -->
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/6UKN1YpVweg?si=XtwNbz30aY1QYJUn" title="Penang Street Food Guide"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                            <div class="mt-auto">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Penang, Malaysia
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mexico City Tacos -->
+                <div class="col-lg-4">
+                    <div class="card h-100 street-food-card">
+                        <img src="https://0201.nccdn.net/1_2/000/000/129/049/picture13.jpg"
+                            class="card-img-top" alt="Mexico City Street Food"
+                            style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">
+                                <i class="fas fa-pepper-hot text-danger me-2"></i>Mexico City Tacos
+                            </h5>
+                            <p class="card-text flex-grow-1">Savor authentic tacos from traditional taco stalls
+                                throughout Mexico City, where each vendor has their own secret recipe passed down
+                                through generations.</p>
+
+                            <!-- YouTube Video -->
+                            <div class="ratio ratio-16x9 mb-3">
+                                <iframe src="https://www.youtube.com/embed/QI08XGbn6g0?si=8xAMkVUJW6rlXfjt" title="Mexico City Street Tacos"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                            <div class="mt-auto">
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Mexico City, Mexico
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Street Food Festivals Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Global Street Food Festivals</h2>
+                    <p class="text-center text-muted mb-5">Join these incredible celebrations of street food culture
+                        around the world</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Z5d68N4eG0AdnHj1AK3EV5te3nYhTRgyLw&s"
+                            class="card-img-top" alt="Night Market Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-lantern text-warning me-2"></i>Richmond Night Market
+                            </h5>
+                            <p class="card-text">North America's largest night market featuring over 110 food vendors
+                                from across Asia.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>May - October
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Vancouver, Canada
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuu6om47U_KqAxMGAw0klN_FEAAsERFv3Ofw&s"
+                            class="card-img-top" alt="Street Food Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-truck text-primary me-2"></i>Food Truck Festival
+                            </h5>
+                            <p class="card-text">Mobile food revolution featuring the best food trucks from across the
+                                United States.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>Summer Season
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Various US Cities
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://asianitinerary.com/wp-content/uploads/2025/07/bb1746c8bb982f5a33e84adad20bcaa9157d7fdf1a797a5d29d096172eeb81bf.jpeg"
+                            class="card-img-top" alt="Asian Street Food Festival"
+                            style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-dragon text-danger me-2"></i>Singapore Food Festival
+                            </h5>
+                            <p class="card-text">Celebration of Singapore's diverse hawker culture and street food
+                                heritage.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>July
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Singapore
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://metro.co.uk/wp-content/uploads/2021/07/SEC_85895826.jpg?quality=90&strip=all"
+                            class="card-img-top" alt="European Street Food" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-crown text-success me-2"></i>London Street Food Festival
+                            </h5>
+                            <p class="card-text">Europe's premier street food event bringing together vendors from
+                                around the world.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>August
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>London, UK
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://curlytales.com/wp-content/uploads/2020/04/683967-muhammad-ali-road-DNA-India-e1587464829752.jpg"
+                            class="card-img-top" alt="Mumbai Food Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-fire text-warning me-2"></i>Mumbai Street Food Festival
+                            </h5>
+                            <p class="card-text">Celebration of Mumbai's legendary chaat culture and spicy street food
+                                varieties.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>January
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Mumbai, India
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://s.abcnews.com/images/US/191004_abcnl_dispatch_tacos_hpMain_16x9_992.jpg?w=992"
+                            class="card-img-top" alt="Taco Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-pepper-hot text-info me-2"></i>World Taco Championships
+                            </h5>
+                            <p class="card-text">International taco competition featuring traditional and innovative
+                                taco creations.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>September
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Various Locations
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Content Section -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="card bg-dark">
+                        <div class="card-body p-5">
+                            <h3 class="card-title mb-4">The Culture of Street Food</h3>
+                            <p class="card-text lead">Street food is more than just quick, affordable meals. It's a
+                                window into the soul of a culture, representing local ingredients, traditional cooking
+                                methods, and the social fabric of communities.</p>
+                            <p class="card-text">From the spicy som tam of Thailand to the savory empanadas of South
+                                America, each dish tells a story of migration, adaptation, and cultural exchange that
+                                has shaped our global food landscape.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+<footer>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="home.html"><img src="img/home_images/logo.png" width="100"></a></li>
+      </ul>
+      <p>Introduction to Street Food</p>
+      <p><br><br>Copyright &copy; 2025 Dream.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>EXPLORE MORE</h4>
+      <ul>
+        <li><a href="global-canada.html">Global Street Food</a></li>
+        <li><a href="malaysia.html">Malaysian Street Food</a></li>
+        <li><a href="culture.html">Food Culture by Difference Country</a></li>
+        <li><a href="top10.html">Top 10 Food</a></li>
+        <li><a href="story.html">Street Food Story</a></li>
+        <li><a href="festival.html">Festival Seasons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +03-2345 9885</li>
+        <br>
+        <li><a href="mailto: dream@gmail.com"><i class="fas fa-envelope"></i> dream99@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FOLLOW US</h4>
+      <div class="links">
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></i></a>
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+<!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your app (only this path; remove any <script src="site.js"> duplicates) -->
+<script src="js/site.js"></script>
+
+<!-- Safety: force a refresh of the badge after the DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.App && typeof App.updateFavCount === 'function') {
+      App.updateFavCount();
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

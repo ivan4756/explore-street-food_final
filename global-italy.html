@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italy Cuisine</title>
+    <!-- Favicon -->
+    <link
+        href="data:image/jpeg;base64,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"
+        rel="icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!--footer css link-->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+.navbar .badge[data-fav-count],
+.navbar .nav-link .badge[data-fav-count],
+.text-bg-warning[data-fav-count]{
+  background:#ffc107 !important;color:#212529 !important;
+  opacity:1 !important;filter:none !important;mix-blend-mode:normal !important;
+  border-radius:999px !important;font-weight:700 !important;padding:2px 6px !important;
+}
+</style>
+
+</head>
+
+
+<body>  
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+           
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="malaysia.html">Malaysian Street Food</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Global Street Food
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="global-canada.html">Canada</a></li>
+                <li><a class="dropdown-item active" aria-current="page" href="global-italy.html">Italy</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="culture.html">Food Culture</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="top10.html">Top 10 Food</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="story.html">Street Food Story</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="festival.html">Festival Seasons</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html">About us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="favorites.html">Favourites
+              <span class="badge rounded-pill text-bg-warning align-text-top ms-1" data-fav-count>0</span>
+              </a>
+            </li> 
+
+          </ul>
+        </div>
+      </div>
+      <a href="login.html" class="login-button">LOGIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <div class="hero-banner italy-hero">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-8">
+                            <h1 class="display-2 fw-bold text-white mb-4">Flavors of Italy</h1>
+                            <p class="lead text-white-50">Experience the authentic tastes of la bella Italia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container my-5">
+            <!-- Introduction -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4">Italian Culinary Excellence</h2>
+                    <p class="lead text-muted">Italian cuisine is a celebration of simplicity, quality ingredients, and
+                        centuries-old traditions that have captivated food lovers worldwide.</p>
+                </div>
+            </div>
+
+            <!-- Regional Cuisines Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Regional Italian Cuisines</h2>
+
+                    <!-- Tab Navigation -->
+                    <ul class="nav nav-tabs justify-content-center" id="regionTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="campania-tab" data-bs-toggle="tab"
+                                data-bs-target="#campania" type="button" role="tab">
+                                <i class="fas fa-volcano me-2"></i>Campania (Naples)
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="emilia-tab" data-bs-toggle="tab" data-bs-target="#emilia"
+                                type="button" role="tab">
+                                <i class="fas fa-wheat me-2"></i>Emilia-Romagna
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tuscany-tab" data-bs-toggle="tab" data-bs-target="#tuscany"
+                                type="button" role="tab">
+                                <i class="fas fa-wine-glass me-2"></i>Tuscany
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="sicily-tab" data-bs-toggle="tab" data-bs-target="#sicily"
+                                type="button" role="tab">
+                                <i class="fas fa-sun me-2"></i>Sicily
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="veneto-tab" data-bs-toggle="tab" data-bs-target="#veneto"
+                                type="button" role="tab">
+                                <i class="fas fa-mask me-2"></i>Veneto
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Content -->
+                    <div class="tab-content" id="regionTabContent">
+                        <!-- Campania Tab -->
+                        <div class="tab-pane fade show active" id="campania" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.pizzanapoletana.org/img/facebook_meta/fb_image.jpg"
+                                            class="card-img-top" alt="Neapolitan Pizza"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pizza Napoletana</h5>
+                                            <p class="card-text">UNESCO-recognized authentic pizza with soft, thin crust
+                                                and San Marzano tomatoes.</p>
+                                            <span class="badge bg-danger badge-region">UNESCO Heritage</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.foodandwine.com/thmb/Hby9wBBAtjo8WOzwrmKXhdfQTzA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Sfogliatelle-FT-RECIPE1222-f5ae520a60c745f8ac83f7519432d904.jpg"
+                                            class="card-img-top" alt="Sfogliatelle"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Sfogliatelle</h5>
+                                            <p class="card-text">Flaky pastry shells filled with sweet ricotta and
+                                                semolina cream.</p>
+                                            <span class="badge bg-warning badge-region">Naples Sweet</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.fetasoller.com/userFiles/Image/Shop/Artikel/Wein_Spirituosen/Spirituosen/VLJ_limoncello/01471_Llimoncello_Licor_Eco_Mallorca_1.jpg"
+                                            class="card-img-top" alt="Limoncello"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Limoncello</h5>
+                                            <p class="card-text">Traditional lemon liqueur from the Amalfi Coast,
+                                                perfect digestif.</p>
+                                            <span class="badge bg-info badge-region">Amalfi Tradition</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Emilia-Romagna Tab -->
+                        <div class="tab-pane fade" id="emilia" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://safrescobaldistatic.blob.core.windows.net/media/2022/11/TAGLIATELLE-AL-RAGU-cut.jpg"
+                                            class="card-img-top" alt="Tagliatelle al Ragu"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tagliatelle al Ragù</h5>
+                                            <p class="card-text">Hand-cut pasta ribbons with authentic Bolognese meat
+                                                sauce.</p>
+                                            <span class="badge bg-success badge-region">Bologna Classic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.oliversmarket.com/wp-content/uploads/2024/09/ParmigianoReggiano_BlogImage_1200x900.jpg"
+                                            class="card-img-top" alt="Parmigiano Reggiano"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Parmigiano Reggiano</h5>
+                                            <p class="card-text">The king of cheeses, aged to perfection in traditional
+                                                caves.</p>
+                                            <span class="badge bg-warning badge-region">DOP Protected</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://recipe-graphics.grocerywebsite.com/0_GraphicsRecipes/5426_4k.jpg"
+                                            class="card-img-top" alt="Tortellini"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tortellini</h5>
+                                            <p class="card-text">Small pasta parcels filled with meat, served in golden
+                                                broth.</p>
+                                            <span class="badge bg-primary badge-region">Modena Pride</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tuscany Tab -->
+                        <div class="tab-pane fade" id="tuscany" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOnVWw10k-T7yrzCspomGGXE5v491M3Hr0Vg&s"
+                                            class="card-img-top" alt="Bistecca Fiorentina"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bistecca alla Fiorentina</h5>
+                                            <p class="card-text">Thick T-bone steak grilled over olive wood coals.</p>
+                                            <span class="badge bg-danger badge-region">Florence Special</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://s3.amazonaws.com/efcheckout/kermitlynch/products/Kermit-Lynch-Wine-Merchant-2017-Chianti-Classico-Riserva-Terrazze-product-image-9028-large.jpg"
+                                            class="card-img-top" alt="Chianti Wine"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Chianti Classico</h5>
+                                            <p class="card-text">World-renowned red wine from the rolling hills of
+                                                Tuscany.</p>
+                                            <span class="badge bg-purple badge-region">Wine Excellence</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://hips.hearstapps.com/hmg-prod/images/ribollita1-1656547993.jpg?crop=1xw:0.8435812837432514xh;center,top&resize=1200:*"
+                                            class="card-img-top" alt="Ribollita"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ribollita</h5>
+                                            <p class="card-text">Hearty bread and vegetable soup, peasant cuisine at its
+                                                finest.</p>
+                                            <span class="badge bg-success badge-region">Comfort Food</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sicily Tab -->
+                        <div class="tab-pane fade" id="sicily" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.allrecipes.com/thmb/V1quMJD2LeEbvZGUL_QCuGwdRQk=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/RM-57844-Arancini-ddmfs-3x4-6021-19619bf1fd4d41279000e464618dd411.jpg"
+                                            class="card-img-top" alt="Arancini"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Arancini</h5>
+                                            <p class="card-text">Golden fried rice balls stuffed with ragù, mozzarella,
+                                                and peas.</p>
+                                            <span class="badge bg-warning badge-region">Street Food</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.giallozafferano.com/images/227-22770/sicilian-cannoli_1200x800.jpg"
+                                            class="card-img-top" alt="Cannoli"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cannoli Siciliani</h5>
+                                            <p class="card-text">Crispy pastry tubes filled with sweet ricotta and
+                                                chocolate chips.</p>
+                                            <span class="badge bg-info badge-region">Island Sweet</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://www.allrecipes.com/thmb/6E_lyvhk5hD7xgyoOQk7tU7tXl4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/247268-eggplant-caponata-sicilian-version-3x4-327-copy-a4ea61283b464351a502ff76093807f3.jpg"
+                                            class="card-img-top" alt="Caponata"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Caponata</h5>
+                                            <p class="card-text">Sweet and sour eggplant stew with olives, capers, and
+                                                tomatoes.</p>
+                                            <span class="badge bg-success badge-region">Traditional Dish</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Veneto Tab -->
+                        <div class="tab-pane fade" id="veneto" role="tabpanel">
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://reportergourmet.com/upload/ricette/1007/d_copertina-risotto-all-amarone.jpg"
+                                            class="card-img-top" alt="Risotto"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Risotto al Amarone</h5>
+                                            <p class="card-text">Creamy rice cooked with prestigious Amarone wine from
+                                                Valpolicella.</p>
+                                            <span class="badge bg-purple badge-region">Wine Region</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://mediterraneantaste.com/wp-content/uploads/2023/11/tiramisu-4583.jpg"
+                                            class="card-img-top" alt="Tiramisu"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tiramisù</h5>
+                                            <p class="card-text">Coffee-soaked ladyfingers layered with mascarpone and
+                                                cocoa.</p>
+                                            <span class="badge bg-warning badge-region">Veneto Origin</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card cuisine-card">
+                                        <img src="https://cdn.winedering.com/uploads/travels/1572/big/immagine6.jpg.webp?hash=8e30a659c31b53017073692309ab0da1"
+                                            class="card-img-top" alt="Prosecco"
+                                            style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Prosecco DOCG</h5>
+                                            <p class="card-text">Sparkling wine from the hills of Valdobbiadene and
+                                                Conegliano.</p>
+                                            <span class="badge bg-info badge-region">Sparkling Excellence</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Signature Dishes Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Iconic Italian Dishes</h2>
+                </div>
+            </div>
+
+            <!-- Neapolitan Pizza Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://images.pexels.com/photos/19602378/pexels-photo-19602378.jpeg"
+                            class="img-fluid rounded-start h-100 object-cover" alt="Neapolitan Pizza">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-pizza-slice text-danger me-2"></i>Neapolitan Pizza
+                                </h3>
+                                <p class="card-text">The UNESCO-recognized Neapolitan pizza, perfected in Naples with
+                                    its characteristic soft, thin crust and simple, high-quality toppings.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/1-SJGQ2HLp8"
+                                        title="Chef Making Pizza in Naples" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>Origin: Naples, Italy</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96746.05134663765!2d14.157756250000002!3d40.83948185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b084f4b7fd703%3A0x7b001e833c6b87e!2sNaples%2C%20Metropolitan%20City%20of%20Naples%2C%20Italy!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pasta Culture Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6 order-md-2">
+                        <img src="https://images.pexels.com/photos/14965992/pexels-photo-14965992.jpeg"
+                            class="img-fluid rounded-end h-100 object-cover" alt="Italian Pasta">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-seedling text-success me-2"></i>Pasta Culture
+                                </h3>
+                                <p class="card-text">Over 350 types of pasta, each tied to local traditions and regional
+                                    specialties, representing the heart of Italian culinary heritage.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/gy7C3MEcgik?si=tkvpHUg7570XXlOP"
+                                        title="Italian Grandmother Making Pasta" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>Region: Bologna, Italy</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91418.16456495808!2d11.29348!3d44.49442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477fd4c5b4c7a4a5%3A0x1e8b8b5b5b5b5b5b!2sBologna%2C%20BO%2C%20Italy!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gelato Section -->
+            <div class="card mb-5 food-card">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="https://images.pexels.com/photos/8713076/pexels-photo-8713076.jpeg"
+                            class="img-fluid rounded-start h-100 object-cover" alt="Italian Gelato Shop">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <div>
+                                <h3 class="card-title">
+                                    <i class="fas fa-ice-cream text-info me-2"></i>Gelato
+                                </h3>
+                                <p class="card-text">Gelato vs ice cream – smoother, creamier, richer in flavor. This
+                                    Italian frozen dessert is crafted with traditional techniques that create its
+                                    signature texture.</p>
+
+                                <!-- YouTube Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <iframe src="https://www.youtube.com/embed/BUuprXEvGQ4?si=RUVqLlwEJDH8NmoG"
+                                        title="Florence Gelato Shop" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Google Map -->
+                            <div class="mt-auto">
+                                <h6><i class="fas fa-map-marker-alt me-2"></i>City: Florence, Italy</h6>
+                                <div class="ratio ratio-21x9">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93238.04705760904!2d11.2462896!3d43.769562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56a680d2d6ad%3A0x93d57917efc72a03!2sFlorence%2C%20Metropolitan%20City%20of%20Florence%2C%20Italy!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
+                                        allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="section-divider">
+
+            <!-- Food Festivals Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-5">Italian Food Festivals</h2>
+                    <p class="text-center text-muted mb-5">Celebrate Italy's culinary traditions at these authentic
+                        festivals</p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlS6uhI1aGb_pTcxsixgT30mKJTb3Q_t4sCw&s"
+                            class="card-img-top" alt="Truffle Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-gem text-warning me-2"></i>Alba White Truffle Festival
+                            </h5>
+                            <p class="card-text">The world's most prestigious truffle festival celebrating Piedmont's
+                                prized white truffles.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>October - November
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Alba, Piedmont
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://zakavto.com.ua/images/data/articles/Neapol%202-min.jpg"
+                            class="card-img-top" alt="Pizzafest" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-pizza-slice text-danger me-2"></i>Pizzafest Naples
+                            </h5>
+                            <p class="card-text">The ultimate pizza celebration in its birthplace, featuring master
+                                pizzaiolos from around the world.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>September
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Naples
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://cdn.shopify.com/s/files/1/0564/9983/0962/files/20190908_120618_3644068e-8f05-4708-a95a-6dfad826df40.webp?v=1688757127"
+                            class="card-img-top" alt="Gelato Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-ice-cream text-info me-2"></i>Gelato Festival
+                            </h5>
+                            <p class="card-text">International gelato competition featuring Italy's finest gelato
+                                masters and innovative flavors.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>May - August
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Various Cities
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://www.illavorodeicontadini.org/wp-content/uploads/2024/09/terra-madre-salone-del-gusto.jpg"
+                            class="card-img-top" alt="Slow Food Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-leaf text-success me-2"></i>Salone del Gusto
+                            </h5>
+                            <p class="card-text">The Slow Food movement's flagship event celebrating sustainable, local,
+                                and artisanal food products.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>October (Biennial)
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Turin, Piedmont
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://www.vinitaly.com/media/xq0jtvln/foto-2-1.jpg?width=1200&height=700&rnd=133651679386670000"
+                            class="card-img-top" alt="Wine Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-wine-glass text-purple me-2"></i>Vinitaly
+                            </h5>
+                            <p class="card-text">The world's largest wine fair showcasing Italy's finest wines and
+                                regional culinary pairings.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>April
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Verona, Veneto
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card festival-card">
+                        <img src="https://static1.squarespace.com/static/5dd5b5e9f226644911c4d733/5dfa844cf7c9c21873c9e82e/61f312de1c7fc14864c72843/1709314297030/food-festivals-in-italy.jpg?format=1500w"
+                            class="card-img-top" alt="Sagra Festival" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-utensils text-warning me-2"></i>Local Sagra Festivals
+                            </h5>
+                            <p class="card-text">Traditional village festivals celebrating local specialties like
+                                porchetta, pecorino, and seasonal produce.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-calendar me-1"></i>Year Round
+                                </small>
+                                <small class="text-muted">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Villages Nationwide
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+    <div class="footer-col">
+      <ul>
+        <li><a href="home.html"><img src="img/home_images/logo.png" width="100"></a></li>
+      </ul>
+      <p>Introduction to Street Food</p>
+      <p><br><br>Copyright &copy; 2025 Dream.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>EXPLORE MORE</h4>
+      <ul>
+        <li><a href="global-canada.html">Global Street Food</a></li>
+        <li><a href="malaysia.html">Malaysian Street Food</a></li>
+        <li><a href="culture.html">Food Culture by Difference Country</a></li>
+        <li><a href="top10.html">Top 10 Food</a></li>
+        <li><a href="story.html">Street Food Story</a></li>
+        <li><a href="festival.html">Festival Seasons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +03-2345 9885</li>
+        <br>
+        <li><a href="mailto: dream@gmail.com"><i class="fas fa-envelope"></i> dream99@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FOLLOW US</h4>
+      <div class="links">
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></i></a>
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your app (only this path; remove any <script src="site.js"> duplicates) -->
+<script src="js/site.js"></script>
+
+<!-- Safety: force a refresh of the badge after the DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.App && typeof App.updateFavCount === 'function') {
+      App.updateFavCount();
+    }
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

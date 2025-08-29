@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Street Food. </title>
+
+  <!--custom css link-->
+  <link rel="stylesheet" href="css/home.css">
+  <!--cookie css link-->
+  <link rel="stylesheet" href="css/cookies.css">
+  <!--footer link-->
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!--Bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your app (only this path; remove any <script src="site.js"> duplicates) -->
+<script src="js/site.js"></script>
+
+<!-- Safety: force a refresh of the badge after the DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.App && typeof App.updateFavCount === 'function') {
+      App.updateFavCount();
+    }
+  });
+</script>
+
+<body>
+<!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+           
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 active" aria-current="page" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="malaysia.html">Malaysian Street Food</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Global Street Food
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="global-canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="global-italy.html">Italy</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="culture.html">Food Culture</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="top10.html">Top 10 Food</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="story.html">Street Food Story</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="festival.html">Festival Seasons</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html">About us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="favorites.html">Favourites
+              <span class="badge rounded-pill text-bg-warning align-text-top ms-1" data-fav-count>0</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <a href="login.html" class="login-button">LOGIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!----------hero---------->
+  <section class="hero-section">
+    <div class="container d-flex align-items-center justify-content-center fs-1 
+    text-white flex-column">
+      <h1>Explore Street Food:
+        <br><span> Global or Malaysian street food</span>
+      </h1>
+    </div>
+  </section>
+
+  <!----------Street Section------------>
+  <section class="home-street">
+    <div class="container-fluid">
+      <div class="row custom-height">
+
+        <!-- Left Side with Video -->
+        <div class="col-md-6 p-0 position-relative text-center text-white">
+          <!-- Background Video -->
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="video/global_home.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- Content -->
+          <div class="overlay-content p-4 bg-dark bg-opacity-50 rounded">
+            <h3>Global Street Food</h3>
+            <p>Street food that comes from different countries around the world, showing the unique flavors, cooking
+              styles, and food traditions of each culture.</p>
+              <a href="global-italy.html" class="btn-custom">Explore</a>    
+          </div>
+        </div>
+
+        <!-- Right Side with Video -->
+        <div class="col-md-6 p-0 position-relative text-center text-white">
+          <!-- Background Video -->
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="video/local_home.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <!-- Content -->
+          <div class="overlay-content p-4 bg-dark bg-opacity-50 rounded">
+            <h3>Malaysia Street Food</h3>
+            <p>Street food that reflects Malaysia’s diverse culture, influenced by Malay, Chinese, and Indian
+              traditions.</p>
+            <a href="malaysia.html" class="btn-custom">Explore</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <!----------Culture Section------------>
+  <section class="home-culture">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="video/culture_home.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <h3>Food Culture<br><span>Discover street food around the world</span></h3>
+      <a href="culture.html" class="btn-custom">Explore</a>
+    </div>
+  </section>
+
+
+  <div class="section-content">
+    <div class="box">
+      <a href="top10.html"><img src="img/home_images/top10_home.avif"></a>
+      <h6>Top 10 Food</h6>
+    </div>
+
+    <div class="box">
+<!--!!!!probelm-->      <a href="story.html"><img src="img/home_images/story_home"></a>
+      <h6>Street Food Story</h6>
+    </div>
+
+    <div class="box">
+      <a href="festival.html"><img src="img/home_images/festival_home.jpg"></a>
+      <h6>Festival Seasons</h6>
+    </div>
+  </div>
+
+
+
+
+  <!---------Footer---------->
+  <footer>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="home.html"><img src="img/home_images/logo.png" width="100"></a></li>
+      </ul>
+      <p>Introduction to Street Food</p>
+      <p><br><br>Copyright &copy; 2025 Dream.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>EXPLORE MORE</h4>
+      <ul>
+        <li><a href="global-canada.html">Global Street Food</a></li>
+        <li><a href="malaysia.html">Malaysian Street Food</a></li>
+        <li><a href="culture.html">Food Culture by Difference Country</a></li>
+        <li><a href="top10.html">Top 10 Food</a></li>
+        <li><a href="story.html">Street Food Story</a></li>
+        <li><a href="festival.html">Festival Seasons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +03-2345 9885</li>
+        <br>
+        <li><a href="mailto: dream@gmail.com"><i class="fas fa-envelope"></i> dream99@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FOLLOW US</h4>
+      <div class="links">
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></i></a>
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!----------Cookies------------>
+
+  <div id="cookies">
+    <div class="cookies">
+      <p>
+        This website uses cookies to ensure you get the best experience on our website.
+        <a href="#">More info</a>
+      </p>
+      <button id="cookies-btn">Confirm</button>
+    </div>
+  </div>
+
+
+  <script src="js/cookies.js"></script>
+
+  <!--back to top button-->
+  <button id="back-to-top" title="Back to Top"><img src="img/home_images/arrow.png"></button>
+
+  <script>
+    const backToTopButton = document.getElementById("back-to-top");
+
+    backToTopButton.style.display = "none";
+
+    window.addEventListener("scroll", function () {
+      if (document.documentElement.scrollTop > window.innerHeight / 2) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    });
+
+    backToTopButton.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <div id="google_translate_element"></div>
+
+  <!-- to your js part -->
+  <script src="script.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
+    } 
+  </script>
+  <script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+  <!--Bootstrap js-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

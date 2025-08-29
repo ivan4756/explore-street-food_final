@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Culture</title>
+    <!--custom css link-->
+    <link rel="stylesheet" href="css/culture.css">
+    <link rel="stylesheet" href="css/cookies.css">
+    <!--footer link-->
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Google Translate API-->
+    <div id="google_translate_element"></div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );
+        } 
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+<!-- jQuery + Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your app (only this path; remove any <script src="site.js"> duplicates) -->
+<script src="js/site.js"></script>
+
+<!-- Safety: force a refresh of the badge after the DOM is ready -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.App && typeof App.updateFavCount === 'function') {
+      App.updateFavCount();
+    }
+  });
+</script>
+
+<body>
+       <!--Navbar-->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand me-auto" href="home.html"><img src="img/home_images/logo.png" alt="Logo"></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+           
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="malaysia.html">Malaysian Street Food</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Global Street Food
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="global-canada.html">Canada</a></li>
+                <li><a class="dropdown-item" href="global-italy.html">Italy</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 active" aria-current="page" href="culture.html">Food Culture</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="top10.html">Top 10 Food</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="story.html">Street Food Story</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="festival.html">Festival Seasons</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="about.html">About us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="favorites.html">
+                  Favourites
+                  <span class="badge rounded-pill text-bg-warning align-text-top ms-1" data-fav-count>0</span>
+                </a>
+
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <a href="login.html" class="login-button">LOGIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+    <div class="slider">
+
+        <div class="list">
+
+            <div class="item">
+                <img src="img/culcure_images/malaysia_culture.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">
+                        <h1>🇲🇾 Malaysia Food Streets</h1>
+                    </div>
+                    <div class="description">Malaysia is famous for its vibrant street food culture, <br> where bustling
+                        streets and night markets come alive <br> the aroma of local delicacies. From Kuala Lumpur’s...
+                    </div>
+                    <div class="button">
+                        <a href="#malaysiaSec"><button>SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/culcure_images/thailand_culture.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">
+                        <h1>🇹🇭 Thailand Food Streets</h1>
+                    </div>
+                    <div class="description">Thailand’s street food culture is world-famous, offering, <br> a mix of
+                        bold flavors, bustling night markets, and <br> vibrant street stalls. From Bangkok’s neon-lit...
+                    </div>
+                    <div class="button">
+                        <a href="#thailandSec"><button>SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/culcure_images/taiwan_culture.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">
+                        <h1>🇹🇼 Taiwan Food Streets</h1>
+                    </div>
+                    <div class="description">Taiwanese streets are vibrant and diverse, often blending <br> modern urban
+                        life with rich cultural heritage. Many <br> streets are famous for night markets, offering...
+                    </div>
+                    <div class="button">
+                        <a href="#taiwanSec"><button>SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item">
+                <img src="img/culcure_images/japan_culture.webp" alt="">
+
+                <div class="content">
+                    <div class="title">
+                        <h1>🇯🇵 Japan Food Streets</h1>
+                    </div>
+                    <div class="description">Japan’s food streets are lively hubs of culinary culture, often found <br>
+                        in bustling districts or near train stations. They feature <br> a mix of traditional and modern
+                        street foods, such as takoyaki...</div></a>
+                    <div class="button">
+                        <a href="#japanSec"><button>SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/culcure_images/korean_culture.jpg" alt="">
+
+                <div class="content">
+                    <div class="title">
+                        <h1>🇰🇷 Korea Food Streets</h1>
+                    </div>
+                    <div class="description">Japan’s food streets are lively hubs of culinary culture, often found <br>
+                        in bustling districts or near train stations. They feature <br> a mix of traditional and modern
+                        street foods, such as takoyaki...</div></a>
+                    <div class="button">
+                        <a href="#koreaSec"><button>SEE MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="thumbnail">
+            <div class="item">
+                <img src="img/culcure_images/malaysia_culture.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/culcure_images/thailand_culture.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/culcure_images/taiwan_culture.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/culcure_images/japan_culture.webp" alt="">
+            </div>
+            <div class="item">
+                <img src="img/culcure_images/korean_culture.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="nextPrevArrows">
+            <button class="prev"><</button>
+            <button class="next">></button>
+        </div>
+    </div>
+
+    <!--custom js file link-->
+    <script src="js/nextprev.js"></script>
+
+    <section class="intro" style="background-image: url(img/culcure_images/intro.jpg);">
+        <div class="intro-text" style="color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+
+            <h1>Food Culture By Difference Country</h1>
+            <p>Food culture around the world reflects the history, traditions, and lifestyles of different countries.
+                <br>Each nation offers unique flavors, ingredients, and cooking styles, from bustling street food
+                markets
+                <br> in Asia to traditional family recipes in Europe. <br>Exploring these food culturesallows us to
+                understand and appreciate the diversity and richness
+                <br> of global culinary traditions.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!--malaysiaSec section-->
+    <section class="malaysiaSec" id="malaysiaSec">
+        <div class="malaysiaSec-img">
+            <img src="img/culcure_images/malaysia_culture.jpg">
+        </div>
+
+        <div class="malaysiaSec-text">
+            <h3>🇲🇾 Malaysia Food Streets</h3>
+            <p>Malaysia is famous for its vibrant street food culture, where bustling
+                streets and night markets come alive with the aroma of local delicacies.
+                <br>From Kuala Lumpur’s neon-lit food streets to Penang’s hawker
+                <br>centres and Chinatown’s hidden gems, each spot offers a unique mix
+                of flavors, traditions, and community vibes.
+            </p>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-5">
+        <!-- Jalan Alor -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/JalanAlor_culture.png" class="card-img-top" alt="Jalan Alor(Kuala Lumpur)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Jalan Alor(Kuala Lumpur)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Jalan Alor, Bukit Bintang, Kuala Lumpur, Malaysia</p>
+                    <p>🍴 <strong>Famous For:</strong> Satay, BBQ seafood, grilled chicken wings, nasi lemak.</p>
+                    <p>🌆 <strong>Why Visit:</strong> The most iconic street food destination in Malaysia, especially at
+                        night with neon lights and bustling vibes.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Gurney Drive Hawker Centre -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/gurney_culture.jpg" class="card-img-top"
+                    alt="Gurney Drive Hawker Centre (Penang)" style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Gurney Drive Hawker Centre (Penang)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> George Town, Penang</p>
+                    <p>🍴 <strong>Famous For:</strong> Char Kway Teow, Assam Laksa, Rojak, Penang Hokkien Mee.</p>
+                    <p>🌆 <strong>Why Visit:</strong> Known as the "food paradise" of Penang, this open-air hawker
+                        centre brings together all of Penang’s iconic street foods in one spot.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Petaling Street -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/Petaling-Street_culture.webp" class="card-img-top"
+                    alt="Petaling Street (Chinatown, Kuala Lumpur)" style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Petaling Street (Chinatown, Kuala Lumpur)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Petaling Street, Chinatown, Kuala Lumpur, Malaysia</p>
+                    <p>🍴 <strong>Famous For:</strong> Hokkien Mee, Chee Cheong Fun, Wanton Mee, roasted duck, herbal
+                        drinks.</p>
+                    <p>🌆 <strong>Why Visit:</strong> A mix of authentic Chinese-Malaysian street food and cultural
+                        vibes, with bustling stalls and shops.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--thailandSec section-->
+    <section class="thialandSec" id="thialandSec">
+        <div class="thialandSec-text">
+            <h3>🇹🇭 Thailand Food Streets</h3>
+            <p>Thailand’s street food culture is world-famous, offering a mix of bold flavors, bustling night markets,
+                and vibrant street stalls.
+                <br> From Bangkok’s neon-lit Yaowarat Road to the lively Khao San Road and Chiang Mai’s night bazaars,
+                visitors can enjoy everything from Pad Thai and mango sticky rice to spicy curries and grilled seafood.
+                <br>Chinese Malaysians dominate business and trading in the country.
+                <br>Eating on the streets of Thailand is not just about food – it’s about the lively atmosphere,
+                friendly vendors, and the true taste of Thai life.
+                </a>.
+            </p>
+        </div>
+
+        <div class="thialandSec-img">
+            <img src="img/culcure_images/thailand_culture.jpg">
+        </div>
+    </section>
+
+    <div class="row g-4 mb-5">
+        <!-- Yaowarat Road -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/China-Town-thailand.jpg" class="card-img-top"
+                    alt="Yaowarat Road (Bangkok’s Chinatown)" style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Yaowarat Road (Bangkok’s Chinatown)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Chinatown, Bangkok</p>
+                    <p>🍴 <strong>Famous For:</strong> Grilled seafood, Oyster omelette, Pad Thai, Mango Sticky Rice.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> Known as the heart of Bangkok’s street food, this street comes
+                        alive at night with glowing neon signs and endless food stalls.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Khao San Road -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/KhaoSanRoad_thailand.jpg" class="card-img-top" alt="Khao San Road (Bangkok)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Khao San Road (Bangkok)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Phra Nakhon District, Bangkok</p>
+                    <p>🍴 <strong>Famous For:</strong> Pad Thai, Mango Smoothies, Coconut ice cream, and even
+                        insects on sticks (for adventurous eaters!).</p>
+                    <p>🌆 <strong>Why Visit:</strong> A lively hotspot for backpackers, offering a mix of delicious
+                        street food, nightlife, and vibrant cultural vibes.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiang Mai Night Bazaar -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/ChiangMai_thailand.jpg" class="card-img-top"
+                    alt="Chiang Mai Night Bazaar (Chiang Mai)" style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Chiang Mai Night Bazaar (Chiang Mai)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Chang Klan Road, Chiang Mai</p>
+                    <p>🍴 <strong>Famous For:</strong> Khao Soi (curry noodle soup), Sai Ua (northern Thai sausage),
+                        Grilled skewers.</p>
+                    <p>🌆 <strong>Why Visit:</strong> A northern Thailand favorite that combines local food,
+                        handicrafts, and culture, making it a must-visit night market.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--taiwanSec section-->
+    <section class="taiwanSec" id="taiwanSec">
+        <div class="taiwanSec-img">
+            <img src="img/culcure_images/taiwan_culture.jpg">
+        </div>
+
+        <div class="taiwanSec-text">
+            <h3>🇹🇼 Taiwan Food Streets</h3>
+            <p>Taiwanese streets are vibrant and diverse, often blending modern urban life with rich cultural heritage.
+                <br> Many streets are famous for night markets, offering a lively atmosphere filled with street food,
+                snacks, and local delicacies.
+                <br>Some streets, like Dihua Street in Taipei, preserve historical architecture and traditional shops
+                selling herbs, textiles, and festive goods.
+                <br> Overall, Taiwan’s streets are hubs for shopping, eating, and socializing, reflecting both the local
+                culture and the fast-paced modern lifestyle.
+            </p>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-5">
+        <!-- Dihua Street -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/DihuaJie_taiwan.jpg" class="card-img-top" alt="Dihua Street (Taipei)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Dihua Street (Taipei)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Taipei, Taiwan</p>
+                    <p>🍴 <strong>Famous For:</strong> Traditional Chinese medicine shops, herbal stores, festive Lunar
+                        New Year snacks.</p>
+                    <p>🌆 <strong>Why Visit:</strong> A historic street blending old charm with modern shops, especially
+                        lively during New Year.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Shilin Night Market -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/Shilin_taiwan.jpg" class="card-img-top" alt="Shilin Night Market (Taipei)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Shilin Night Market (Taipei)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Taipei, Taiwan</p>
+                    <p>🍴 <strong>Famous For:</strong> Stinky tofu, oyster omelets, bubble tea, fried chicken cutlets.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> The biggest and most famous night market in Taipei, perfect for
+                        food lovers.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Liuhe Night Market -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/LiuHe_taiwan.JPG" class="card-img-top" alt="Liuhe Night Market (Kaohsiung)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Liuhe Night Market (Kaohsiung)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Kaohsiung, Taiwan</p>
+                    <p>🍴 <strong>Famous For:</strong> Fresh seafood, papaya milk, local Kaohsiung snacks.</p>
+                    <p>🌆 <strong>Why Visit:</strong> Lively and tourist friendly, easy to walk through while sampling
+                        authentic Taiwanese food.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--japanSec section-->
+    <section class="japanSec" id="japanSec">
+        <div class="japanSec-img">
+            <img src="img/culcure_images/japan_culture.webp">
+        </div>
+
+        <div class="japanSec-text">
+            <h3>🇯🇵 Japan Food Streets</h3>
+            <p>Japan’s food streets are lively hubs of culinary culture, often found in bustling districts or near train
+                stations.
+                <br> They feature a mix of traditional and modern street foods, such as takoyaki (octopus balls),
+                okonomiyaki (savory pancakes), yakitori (grilled skewers), and taiyaki (fish-shaped pastries).
+                <br>These streets are known for their vibrant atmosphere, neon lights, and friendly vendors, making them
+                a must-visit for both locals and tourists seeking authentic Japanese flavors.
+
+            </p>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-5">
+        <!-- Ameya-Yokochō -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/Ameyo_japan.webp" class="card-img-top" alt="Ameya-Yokochō (Tokyo)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Ameya-Yokochō (Tokyo)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Ueno, Tokyo</p>
+                    <p>🍴 <strong>Famous For:</strong> Takoyaki, taiyaki (fish-shaped cake), yakitori, street snacks.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> A lively market street packed with food stalls, bargain shops, and
+                        nostalgic Showa-era vibes.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Nishiki Market -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/Nishiki_japan.jpg" class="card-img-top" alt="Nishiki Market (Kyoto)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Nishiki Market (Kyoto)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Downtown Kyoto</p>
+                    <p>🍴 <strong>Famous For:</strong> Fresh seafood, pickles, wagashi (Japanese sweets), grilled mochi.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> Known as “Kyoto’s Kitchen,” this historic market is a foodie
+                        heaven full of local specialties.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Dotonbori -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/Dotonbori_japan.jpg" class="card-img-top" alt="Dotonbori (Osaka)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Dotonbori (Osaka)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Osaka, Japan</p>
+                    <p>🍴 <strong>Famous For:</strong> Okonomiyaki, takoyaki, kushikatsu, ramen.</p>
+                    <p>🌆 <strong>Why Visit:</strong> The most iconic street food destination in Osaka, famous for neon
+                        lights, giant food signs, and vibrant nightlife</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--koreaSec section-->
+    <section class="koreaSec" id="koreaSec">
+        <div class="koreaSec-img">
+            <img src="img/culcure_images/korean_culture.jpg">
+        </div>
+
+        <div class="koreaSec-text">
+            <h3>🇰🇷 Korea Food Streets</h3>
+            <p>Korean food streets are vibrant hubs filled with the sights and smells of popular street foods.
+                <br> They feature tasty dishes like tteokbokki (spicy rice cakes), hotteok (sweet pancakes), and fried
+                chicken, often sold from small stalls or carts.
+                <br>These streets are known for their lively, energetic atmosphere, especially in busy districts like
+                Myeongdong in Seoul, where locals and tourists gather to enjoy casual, affordable, and flavorful snacks.
+
+            </p>
+        </div>
+    </section>
+
+    <div class="row g-4 mb-5">
+
+        <!-- Myeongdong Street -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/myeongdong_korea.jpg" class="card-img-top" alt="Myeongdong Street (Seoul)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Myeongdong Street (Seoul)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> South Korea</p>
+                    <p>🍴 <strong>Famous For:</strong>Tteokbokki (spicy rice cakes), hotteok (sweet pancakes), fried
+                        chicken, trendy street snacks.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> A bustling shopping district filled with vibrant food stalls,
+                        fashion shops, and the true taste of modern Korean street food.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Gwangjang Market -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/gwangjang_korea.jpg" class="card-img-top" alt="Gwangjang Market (Seoul)"
+                    style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Gwangjang Market (Seoul)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Seoul, South Korea</p>
+                    <p>🍴 <strong>Famous For:</strong> Bindaetteok (mung bean pancakes), mayak gimbap (mini seaweed
+                        rolls), and authentic traditional dishes.
+                    </p>
+                    <p>🌆 <strong>Why Visit:</strong> ne of Korea’s oldest markets, offering a historic and cultural
+                        food experience with genuine Korean flavors.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bupyeong Kkangtong Night Market -->
+        <div class="col-lg-4">
+            <div class="card h-100 street-street-card">
+                <img src="img/culcure_images/bupyeong_korea.webp" class="card-img-top"
+                    alt="Bupyeong Kkangtong Night Market (Busan)" style="height: 250px; object-fit: cover;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Bupyeong Kkangtong Night Market (Busan)
+                    </h5>
+                    <p class="card-text flex-grow-1">📍 <strong>Location:</strong> Busan, South Korea</p>
+                    <p>🍴 <strong>Famous For:</strong> Ssiat hotteok (seed-filled pancakes), eomuk (fish cakes), seafood
+                        snacks, and international bites.</p>
+                    <p>🌆 <strong>Why Visit:</strong> A lively night market popular among locals and tourists, with
+                        endless street food variety and a fun late-night vibe</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- REST API Script (works for ALL food street cards) -->
+<script>
+$(document).ready(function () {
+  $(".card-img-top").css("cursor", "pointer"); // make images look clickable
+
+  $(".card-img-top").click(function () {
+    let cardBody = $(this).closest(".card").find(".card-body");
+    let address = cardBody.find(".card-text").text(); // grab Location line
+
+    // REST API call (Nominatim OpenStreetMap)
+    $.ajax({
+      url: "https://nominatim.openstreetmap.org/search",
+      type: "GET",
+      data: {
+        q: address,
+        format: "json"
+      },
+      success: function (data) {
+        if (data.length > 0) {
+          let lat = data[0].lat;
+          let lon = data[0].lon;
+
+          // show coordinates inside card
+          cardBody.find(".coords").remove(); // prevent duplicate
+          cardBody.append(
+            "<p class='coords' style='color:green; font-weight:bold;'>📍 Lat: " + lat + ", Lng: " + lon + "</p>"
+          );
+
+          // open location in Google Maps
+          let mapUrl = "https://www.google.com/maps?q=" + lat + "," + lon;
+          window.open(mapUrl, "_blank");
+        } else {
+          alert("❌ Location not found.");
+        }
+      },
+      error: function () {
+        alert("⚠️ API request failed.");
+      }
+    });
+  });
+});
+</script>   
+
+    <footer>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="home.html"><img src="img/home_images/logo.png" width="100"></a></li>
+      </ul>
+      <p>Introduction to Street Food</p>
+      <p><br><br>Copyright &copy; 2025 Dream.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>EXPLORE MORE</h4>
+      <ul>
+        <li><a href="global-canada.html">Global Street Food</a></li>
+        <li><a href="malaysia.html">Malaysia Street Food</a></li>
+        <li><a href="culture.html">Food Culture by Difference Country</a></li>
+        <li><a href="top10.html">Top 10 Food</a></li>
+        <li><a href="story.html">Street Food Story</a></li>
+        <li><a href="festival.html">Festival Seasons</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> +03-2345 9885</li>
+        <br>
+        <li><a href="mailto: dream@gmail.com"><i class="fas fa-envelope"></i> dream99@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>FOLLOW US</h4>
+      <div class="links">
+        <a href="https://youtube.com"><i class="fab fa-youtube"></i></i></a>
+        <a href="https://tiktok.com"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </footer>
+
+    <div id="cookies">
+        <div class="cookies-container">
+            <div class="cookies-subcontainer">
+                <div class="cookies">
+                    <p>This website uses cookies to ensure you get the best experience on our website.
+                        <a href="">More info</a>
+                    </p>
+                    <button id="cookies-btn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cookies.js"></script>
+
+    <!--back to top button-->
+<!--!!!problem-->    <button id="back-to-top" title="Back to Top"><img src="img/culcure_images/up.png"></button>
+
+    <script>
+        const backToTopButton = document.getElementById("back-to-top");
+
+        backToTopButton.style.display = "none";
+
+        window.addEventListener("scroll", function () {
+            if (document.documentElement.scrollTop > window.innerHeight / 2) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        });
+
+        backToTopButton.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!--Bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
