@@ -1,0 +1,386 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: linear-gradient(180deg, #0d1b2a, #5a729e, #000000);
+  color: #333;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+
+    display: flex;              
+    align-items: center;        
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items:center;
+    margin-right: auto;
+  }
+  
+.navbar-brand img {
+    width: 80px !important;
+    height: 65px !important;
+    margin-right: 10px;
+    padding: 2px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+  }
+
+.login-button{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-top: -5px;
+}
+
+.login-button:hover{
+    background-color: #F59A39;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-toggler:focus, 
+.btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+ul .nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+ul .nav-link:hover,
+ul .nav-link.active{
+    color: #000;
+}
+
+@media(min-width: 991px){
+    ul .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #F59A39;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul .nav-link:hover::before,
+    ul .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+/* Upper */
+.Upper {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* adjust height if you want smaller or bigger */
+  overflow: hidden;
+}
+
+.header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the image covers the whole area */
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  padding: 20px 40px;
+  border-radius: 10px;
+
+  font-family: Arial, sans-serif !important;
+  font-weight: bold !important;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+}
+
+/* Festival Cards */
+.festival-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* auto responsive */
+  gap: 20px;
+  padding: 20px;
+}
+
+.festival-item {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 180px;  /* smaller height */
+    min-height: 180px;
+  width: 100%;     /* no more 200% stretch */
+}
+
+.festival-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.festival-item img {
+  width: 100%;
+  height: 180px;   /* make all cards same height */
+  object-fit: cover; 
+  border-radius: 10px; /* keep smooth rounded corners */
+}
+
+.festival-item h2 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+  flex-grow: 1; /* make sure spacing stays even */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+
+  font-family: Arial, sans-serif !important;
+  font-weight: bold !important;
+}
+
+.festival-box {
+  background-color: #fdf6ec; /* soft beige */
+  border-radius: 16px;
+}
+
+.festival-img {
+  max-width: 280px;  /* control image size */
+  border-radius: 12px; /* rounded image */
+}
+
+/*Filter button*/
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #E6B9A6;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #d79c87; /* slightly darker on hover */
+  transform: scale(1.05);
+}
+
+.filter-buttons button.active {
+  background-color: #A7727D; /* darker brown for active */
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.filter-buttons button:focus {
+  outline: 2px solid #333;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 800px;   /* wider since horizontal */
+  text-align: left;   /* align text left */
+  position: relative;
+  display: flex;      /* side by side layout */
+  gap: 20px;
+  align-items: center;
+}
+
+.modal-content h2 {
+  font-weight: bold;
+  font-size: 22px;   /* you can adjust size */
+  color: #2c3e50;    /* dark blue-grey for contrast */
+  margin-bottom: 10px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 300px;   
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.modal-title {
+  font-weight: 700;   /* bold */
+  font-size: 24px;    /* make it larger */
+  color: #2c3e50;     /* optional: nice dark color */
+}
+
+
+.modal-text {
+  width: 55%;          /* right side for text */
+}
+
+.modal-text h2 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.modal-text p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* festival hover */
+.festival-box {
+  transition: all 0.3s ease !important;
+}
+
+.festival-box:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25) !important;
+  cursor: pointer;
+}
+
+/*food hover*/
+.food-item {
+  transition: all 0.3s ease;
+}
+.food-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+
+
+/* Back to top button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #cfa97e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#backToTop:hover {
+  background: #b68d65;
+}
+
+/*Footer*/
+footer {
+  position: relative;
+  z-index: 10; 
+  border-top: 1px solid #ccc; 
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  text-align: left;
+}

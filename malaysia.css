@@ -1,0 +1,288 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0d1b2a, #5a729e, #000000) !important;
+  color: #070707;
+}
+
+/*Nav Bar*/
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+
+    display: flex;              
+    align-items: center;        
+    justify-content: space-between;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items:center;
+    margin-right: auto;
+  }
+  
+.navbar-brand img {
+    width: 80px !important;
+    height: 65px !important;
+    margin-right: 10px;
+    padding: 2px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+  }
+
+.login-button{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-top: -5px;
+}
+
+.login-button:hover{
+    background-color: #F59A39;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-toggler:focus, 
+.btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+ul .nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+ul .nav-link:hover,
+ul .nav-link.active{
+    color: #000;
+}
+
+@media(min-width: 991px){
+    ul .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #F59A39;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul .nav-link:hover::before,
+    ul .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+/* Upper */
+.Upper {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* adjust height if you want smaller or bigger */
+  overflow: hidden;
+}
+
+.header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the image covers the whole area */
+  filter: brightness(70%);
+}
+
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+
+
+/* Food List */
+.food-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.food-item {
+  background: white;
+  border-radius: 15px; /* round rectangle */
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+}
+
+.food-item img {
+  width: 100%;
+  height: 180px;
+  object-fit:cover;
+  border-bottom: 4px solid #927878;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.food-item h2 {
+  font-size: 1.4rem;
+  margin: 1rem;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  
+}
+
+.food-item .category {
+  background-color: #E6B9A6;
+  color: white;
+  font-size: 0.85rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.food-item p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.filter-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #E6B9A6;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #E6B9A6;
+}
+
+.filter-buttons button.active {
+  background-color: #b88774; /* darker highlight */
+}
+
+/* Overlay for fullscreen image */
+.image-overlay {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85); /* darker background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Enlarged image */
+.image-overlay img {
+  max-width: 90vw;   /* nearly fullscreen */
+  max-height: 95vh;
+  object-fit:contain;
+  display:block;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Back to top button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #cfa97e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#backToTop:hover {
+  background: #b68d65;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  z-index: 10; 
+  border-top: 1px solid #ccc; 
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  text-align: left;
+}

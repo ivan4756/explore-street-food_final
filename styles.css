@@ -1,0 +1,547 @@
+
+:root { --brand:#0d6efd; }
+body { scroll-behavior: smooth; }
+
+/*nav bar*/
+.navbar{
+    background-color: #fff;
+    height: 80px ;
+    margin: 20px ;
+    border-radius: 16px;
+    padding: 0.5rem ;
+
+    display: flex;              
+    align-items: center;        
+    justify-content: space-between;
+}
+
+
+.navbar-brand {
+    display: flex;
+    align-items:center;
+    margin-right: auto;
+  }
+  
+.navbar-brand img {
+    width: 80px !important;
+    height: 65px !important;
+    margin-right: 10px;
+    padding: 2px;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+  }
+
+.login-button{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-top: -4px;
+}
+
+.login-button:hover{
+    background-color: #F59A39;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-toggler:focus, 
+.btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+ul .nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+ul .nav-link:hover,
+ul .nav-link.active{
+    color: #000;
+}
+
+@media(min-width: 991px){
+    ul .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #F59A39;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul .nav-link:hover::before,
+    ul .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+body {
+  padding-top: 100px;
+}
+
+.hero { background: #f8f9fa; border-bottom: 1px solid #eee; }
+.placeholder-card { border-radius: 1rem; }
+.validator-tooltip .tooltip-inner {
+  background: #fff;
+  color: #333;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+  font-size: .95rem;
+}
+.validator-tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
+.validator-tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: #d0d0d0; /* arrow border */
+}
+.validator-tooltip .tooltip-arrow::after { display: none; }
+.form-control.is-invalid { border-color: #dc3545; }
+/* Newsletter image sizing */
+.newsletter-logo { max-width: 220px; width: 100%; }
+@media (max-width: 767.98px) {
+  .newsletter-logo { max-width: 160px; }
+}
+/* === Bigger cards with hover scale === */
+.card.h-100 {
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 520px;
+  border-radius: 1rem;
+}
+
+.card.h-100:hover {
+  transform: scale(1.035);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* === Image zoom inside card on hover === */
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.08);
+}
+/* Dynamic grow effect for "Street Food near your location" link */
+.dynamic-link {
+  display: inline-block;
+  font-weight: 500;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.dynamic-link:hover {
+  transform: scale(1.15);        /* grows 15% */
+  color: #d9534f;                /* Bootstrap's danger red (you can pick another) */
+  text-decoration: none;         /* removes underline on hover */
+}
+
+/* ===== About page hero ===== */
+.hero-about {
+  position: relative;
+  min-height: 48vh;
+  background: url("img/about-hero.jpg") center center / cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+}
+
+
+.hero-about .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* darken image like the screenshot */
+  backdrop-filter: blur(0.5px);
+}
+
+.hero-about .hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+main.bg-dark {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: -1rem; /* subtle overlap with hero */
+}
+/* Portrait helper + no-crop styling */
+.ratio-9x16 { --bs-aspect-ratio: 177.7778%; } /* 9x16 default */
+.portrait-video { background: #000; overflow: hidden; }
+
+/* No cropping in the box; black bars if needed */
+.object-contain { object-fit: contain; background: #000; }
+
+/* Optional: keep the on-page frame from getting too tall */
+.portrait-video { max-height: 70vh; }   /* never taller than 70% of viewport */
+/* ===== Section title with dotted lines (like your reference) ===== */
+.section-title {
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding: .25rem .75rem;
+}
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 42vw;                /* long lines left & right */
+  height: 6px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    #c7c7c7 0, #c7c7c7 6px,
+    transparent 6px, transparent 12px
+  );
+  opacity: .9;
+}
+.section-title::before { right: 100%; margin-right: .75rem; }
+.section-title::after  { left: 100%;  margin-left:  .75rem; }
+
+/* ===== Person cards (photo on top, name block below) ===== */
+.person-card {
+  border-radius: .75rem;
+  overflow: hidden;
+  background: #fff;
+}
+.person-photo {
+  background-color: #e9ecef;        /* fallback if image missing */
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: .75rem;
+  border-top-right-radius: .75rem;
+}
+/* make the photo fill the ratio box */
+.ratio > .person-photo { width: 100%; height: 100%; }
+
+/* default look: fill + center */
+.person-photo {
+  background-size: cover;          /* fill the frame */
+  background-position: center;     /* CENTER the image */
+  background-repeat: no-repeat;
+}
+
+
+/* Name + orange dotted accent */
+.person-name {
+  letter-spacing: .06em;
+}
+.name-accent {
+  width: 110px;
+  height: 6px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    #ff914d 0, #ff914d 6px,
+    transparent 6px, transparent 12px
+  );
+  opacity: .95;
+}
+
+.person-bio {
+  max-width: 36rem;          /* keeps lines readable */
+  line-height: 1.5;
+}
+/* Make photo fill the Bootstrap ratio box */
+.ratio > .person-photo { width: 100%; height: 100%; }
+
+/* Zoom OUT a bit but keep the face centered */
+.person-photo--zoom85 {
+  background-size: 75% auto;       /* 85% = zoomed out; try 80–95% to taste */
+  background-position: center 10%;  /* slightly above center for better headroom */
+  background-repeat: no-repeat;
+  background-color: #e9ecef;        /* fills any side bars if they appear */
+}
+
+/*footer*/
+footer {
+  position: relative;
+  z-index: 10; 
+  border-top: 1px solid #ccc; 
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  text-align: left;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+  
+#back-to-top:hover {
+    transform: scale(1.1);
+}
+  
+#back-to-top img {
+    width: 30px;
+    height: auto;
+}
+/* Dark blue section background (keeps cards white) */
+.section-dark{
+  background-color:#0f1f2f;   /* tweak this hex if you want a different blue */
+}
+
+/* Make the section title readable on dark bg */
+.section-dark .section-title{
+  color:#fff;
+}
+/* Match "Street Food Stories" page background */
+:root { --efs-dark: var(--bs-body-bg, #0d1b2a); } /* fallback hex just in case */
+
+.about-page,
+.about-page main.bg-dark,
+.section-dark {
+  background-color: var(--efs-dark) !important;
+}
+
+/* keep text readable on dark */
+.section-dark { color: #e9eef5; }
+.section-dark .section-title,
+.section-dark h1, .section-dark h2, .section-dark h3 { color: #fff !important; }
+.section-dark .text-secondary { color: rgba(255,255,255,.72) !important; }
+
+
+/* ========== 1) SOCIAL ICONS (Follow us) ========== */
+/* turn the icon links into round buttons that pop on hover */
+#follow-and-subscribe .d-flex.gap-3 a {
+  color: #eaf1ff !important;          /* icon color */
+  background: #243244;                /* pill background */
+  width: 44px; height: 44px;
+  border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+#follow-and-subscribe .d-flex.gap-3 a:hover {
+  background: #ff914d;                /* your orange accent */
+  color: #0f1722 !important;          /* legible on orange */
+  transform: translateY(-2px) scale(1.06);
+}
+
+/* ========== 2) SECTION TITLE LINES TO FULL PAGE EDGE ========== */
+.section-title::before,
+.section-title::after {
+  width: 100vw;                        /* push the dotted line to viewport edges */
+  background: repeating-linear-gradient(
+    to right,
+    #a7b0bc 0 8px,
+    transparent 8px 16px
+  );
+  opacity: .85;
+}
+
+/* ========== 3) DARK CARDS + READABLE BIO TEXT ========== */
+/* card bg on dark sections */
+.section-dark .person-card {
+  background: #1d2a3a;                 /* dark slate card */
+  border: 1px solid rgba(255,255,255,.06);
+  color: #e9eef5;
+}
+/* keep photo box dark too (when image has empty edges) */
+.section-dark .person-photo { background-color: #142033; }
+
+/* headings & name */
+.section-dark .person-name { color: #ffffff; }
+
+/* bio paragraph + small text colors for legibility */
+.section-dark .person-card .card-body,
+.section-dark .person-card p,
+.section-dark .person-card .small,
+.section-dark .person-bio {
+  color: #cfd7e3 !important;           /* light grey-blue for body copy */
+}
+
+/* orange dotted accent stays vivid on dark card */
+.section-dark .name-accent {
+  background: repeating-linear-gradient(
+    to right,
+    #ff9a57 0 6px,
+    transparent 6px 12px
+  );
+  opacity: .95;
+}
+
+/* Optional: make the image area corners match the card */
+.section-dark .person-card .ratio,
+.section-dark .person-card .person-photo {
+  border-top-left-radius: .75rem;
+  border-top-right-radius: .75rem;
+  overflow: hidden;
+}
+/* ===== Shared dark page theme (About, Top10, Favourites) ===== */
+:root{
+  /* same blue used on About */
+  --dark-page: #192231;            /* page background */
+  --dark-text: #e9eef7;            /* default light text */
+  --dark-muted: rgba(255,255,255,.75);
+}
+
+/* Apply this to <body class="page-dark"> on any page */
+.page-dark{
+  background-color: var(--dark-page);
+  color: var(--dark-text);
+}
+
+/* Common light bands/sections should also go dark on these pages */
+.page-dark main,
+.page-dark .bg-body-tertiary,
+.page-dark section.section-dark{
+  background-color: var(--dark-page) !important;
+}
+
+/* Headings & muted copy */
+.page-dark h1, .page-dark h2, .page-dark h3,
+.page-dark .display-1, .page-dark .display-2, .page-dark .display-3, .page-dark .display-4 {
+  color: #fff;
+}
+.page-dark .text-secondary{ color: var(--dark-muted) !important; }
+
+/* Keep content cards white and readable */
+.page-dark .card{ background:#fff; color:#212529; }
+
+/* Outline buttons often used for legal/links */
+.page-dark .btn-outline-dark{
+  border-color:#cfd7e4; color:#cfd7e4;
+}
+.page-dark .btn-outline-dark:hover{
+  background:#cfd7e4; color:var(--dark-page);
+}
+
+/* Dotted title rails look nicer on dark */
+.page-dark .section-title{ color:#fff; }
+.page-dark .section-title::before,
+.page-dark .section-title::after{
+  background: repeating-linear-gradient(
+    to right, #7e8a9d 0, #7e8a9d 6px, transparent 6px, transparent 12px
+  );
+  opacity:.85;
+}
+
+
+/* Lighter dark panel used by bio cards */
+:root {
+  --panel-dark: #000000;        /* lighter than the old #182737 */
+  --panel-text: #f2f6fb;
+  --panel-muted: rgba(255,255,255,.78);
+}
+
+.section-dark .card.person-card{
+  background: var(--panel-dark);
+  color: var(--panel-text);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 6px 22px rgba(0,0,0,.25);
+}
+
+.section-dark .person-bio,
+.section-dark .card.person-card .text-secondary{
+  color: var(--panel-muted) !important;
+}
+/* Top 10 cards — match the bio card style */
+#foodsGrid .card,
+#foodsGrid .card.h-100{
+  background: var(--panel-dark);
+  color: var(--panel-text);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 6px 22px rgba(0,0,0,.25);
+}
+
+#foodsGrid .card .text-secondary,
+#foodsGrid .card .small{
+  color: var(--panel-muted) !important;
+}
+/* === DARK CARD STYLE FOR BOTH GRIDS (Top10 + Favourites) === */
+#foodsGrid .card,
+#foodsGrid .card.h-100,
+#favouritesGrid .card,
+#favouritesGrid .card.h-100{
+  background: var(--panel-dark);
+  color: var(--panel-text);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 6px 22px rgba(0,0,0,.25);
+  border-radius: 14px;
+}
+
+#foodsGrid .card .text-secondary,
+#foodsGrid .card .small,
+#favouritesGrid .card .text-secondary,
+#favouritesGrid .card .small{
+  color: var(--panel-muted) !important;
+}
+
+/* Buttons on dark cards */
+#foodsGrid .card .btn-outline-primary,
+#favouritesGrid .card .btn-outline-primary{
+  border-color:#7db3ff; color:#7db3ff;
+}
+#foodsGrid .card .btn-outline-secondary,
+#favouritesGrid .card .btn-outline-secondary{
+  border-color:#a0a9b4; color:#a0a9b4;
+}
+#foodsGrid .card .btn-outline-success,
+#favouritesGrid .card .btn-outline-success{
+  border-color:#7fd3a5; color:#7fd3a5;
+}
+#foodsGrid .card .btn-outline-primary:hover,
+#favouritesGrid .card .btn-outline-primary:hover{
+  background:#7db3ff; color:#0b1a27;
+}
+#foodsGrid .card .btn-outline-secondary:hover,
+#favouritesGrid .card .btn-outline-secondary:hover{
+  background:#a0a9b4; color:#0b1a27;
+}
+#foodsGrid .card .btn-outline-success:hover,
+#favouritesGrid .card .btn-outline-success:hover{
+  background:#7fd3a5; color:#0b1a27;
+}
+/* ===== Reusable slim hero (photo + dark overlay) ===== */
+.hero-slim{
+  position: relative;
+  min-height: 36vh;
+  display:flex; align-items:center;
+  color:#fff;
+  background: #0f1f2f center/cover no-repeat fixed;
+}
+.hero-slim .hero-overlay{ position:absolute; inset:0; background:rgba(0,0,0,.58); }
+.hero-slim .hero-content{ position:relative; z-index:1; padding:3.5rem 0; }
+
+/* avoid "fixed" jank on some mobiles */
+@media (max-width: 991.98px){
+  .hero-slim{ background-attachment: scroll; }
+}
+/* Normalize favourites counter badge across the whole site */
+.navbar .badge[data-fav-count]{
+  /* same yellow everywhere */
+  background-color: #ffc107 !important;  /* Bootstrap warning yellow */
+  color: #212529 !important;             /* legible text on yellow */
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;                 /* undo any inherited link opacity */
+  filter: none !important;               /* just in case a filter is applied somewhere */
+}

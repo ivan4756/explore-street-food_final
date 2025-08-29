@@ -1,0 +1,113 @@
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    padding: 2px;
+    background-color: #000;
+  }
+
+.login-button{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover{
+    background-color: #F59A39;
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-toggler-icon{
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #fff;
+}
+
+.navbar-toggler:focus, 
+.btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+ul .nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+ul .nav-link:hover,
+ul .nav-link.active{
+    color: #000;
+}
+
+@media(min-width: 991px){
+    ul .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #F59A39;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    ul .nav-link:hover::before,
+    ul .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+/* =========================================================
+   UNIFIED FAVOURITES BADGE (wins on every page)
+   Place this AT THE VERY END of the last global stylesheet
+   ========================================================= */
+:root{
+  --fav-badge-bg: #ffc107;  /* your yellow */
+  --fav-badge-fg: #212529;  /* legible dark text */
+}
+
+.navbar .badge[data-fav-count],
+.navbar .nav-link .badge[data-fav-count],
+.text-bg-warning[data-fav-count]{
+  background-color: var(--fav-badge-bg) !important;
+  color: var(--fav-badge-fg) !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  padding: 2px 6px !important;
+  line-height: 1;
+  min-width: 1.25rem;
+  text-align: center;
+  display: inline-block;
+
+  /* neutralize page-specific dimming */
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  box-shadow: none !important;
+}
+
+/* small gap after "Favourites" text */
+.navbar .nav-link .badge[data-fav-count]{ margin-left: .35rem; }
